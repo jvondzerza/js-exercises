@@ -19,12 +19,9 @@ const shows = [
 const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
 const uCFirst = sentence => {
-  const words = sentence.split(``);
-  words[0] = words[0].toUpperCase()
-  words.forEach(word => {
-    const letters = word.split('');
-  });
-  return words.join("");
+  let words = sentence.split(` `);
+  words = words.map(word => word.charAt(0).toUpperCase() + word.slice(1));
+  return words.join(` `);
 };
 
 const writeTitle = title => {

@@ -12,5 +12,16 @@
 (function() {
 
     // your code here
+    function infoRequest() {
+        let age = prompt('Age?');
+        let gender = prompt("Gender?");
+        let town = prompt("Current town of residence?");
 
+        let response = confirm("Please confirm your details: \n" + "Age: " + age + '\n' + "Gender: " + gender + '\n' + "Town: " + town);
+
+        if (response) alert('Thank you.');
+        else infoRequest();
+    }
+
+    infoRequest();
 })();

@@ -40,19 +40,15 @@ const actorsList = [
         film: "The Revenant",
         age: 41
     }
-];
-
-const actors = [...actorsList];
+]
 
 const tagWrap = (content, tag) => document.write(`<${tag}>${content}</${tag}>`);
 
-actors.sort((a, b) => a.age - b.age);
+let actors = [...actorsList];
+actors = actors
+    .map(obj => obj.actor.split(' ')[1])
+    .sort();
 
 document.write(`<ul>`);
-actors
-    .reverse()
-    .map(actor => tagWrap(actor.actor, `li`));
+actors.map(lastName => tagWrap(lastName, `li`));
 document.write(`</ul>`);
-
-let sum = actors.reduce((a, { age }) => a + age, 0)
-console.log(sum);

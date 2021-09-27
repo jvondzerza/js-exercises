@@ -11,6 +11,7 @@
 
 (function() {
 
-    // your code here
+    let greeting = "Hello, World!";
+    alert(greeting);
 
 })();

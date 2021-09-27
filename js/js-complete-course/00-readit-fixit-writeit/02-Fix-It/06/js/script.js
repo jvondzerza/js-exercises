@@ -66,16 +66,8 @@ const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
 const topScoreFilter = show => show.score > 90;
 
-console.log(shows);
+const highScore = shows.filter(topScoreFilter);
 
-const createList = shows => {
-  return `
-    <ol>${shows
-      .filter(topScoreFilter)
-      .map(show => wrapWithTag(shows.title, `li`) + show.score)
-      .join(``)}
-    </ol>`;
-}
-console.log(shows);
-
-document.write(createList(shows));
+document.write(`<ol>`);
+highScore.forEach(show => document.write(wrapWithTag(show.title + ` (${show.score}%)`, `li`)));
+document.write(`</ol>`);
