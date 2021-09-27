@@ -16,10 +16,8 @@ const tvshows = [
   `the oa`,
 ];
 
-const wrapWithTag = (content, tagname) => {
-  `<${tagname}>${content}</${tagname}>`;
-};
+const wrapWithTag = (content, tagname) => `<${tagname}>${content}</${tagname}>`;
 
 document.write(`<ol>`);
-show.forEach(tvshows => document.write(wrapWithTag(show, `li`)));
+tvshows.forEach(tvshow => document.write(wrapWithTag(tvshow, `li`)));
 document.write(`</ol>`);
