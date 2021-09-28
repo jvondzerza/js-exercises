@@ -11,7 +11,7 @@
 
 (function() {
 
-    var fruits = [
+    let fruits = [
         "pomme",
         "poire",
         "fraise",
@@ -25,5 +25,13 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', function () {
+        fruits.shift(); //removes first item
+        fruits.pop(); //removes last item
+        fruits.unshift("banana");//adds items to beginning
+        fruits.push("kiwi");//adds items to end
 
+        console.log(fruits)
+
+    })
 })();

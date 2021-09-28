@@ -11,21 +11,24 @@
 
 (function() {
 
-    var fruits = [
-        "pomme",
-        "poire",
-        "fraise",
-        "tomate",
+    let fruits = [
+        "apple",
+        "pear",
+        "raspberry",
+        "tomatos",
         "kiwi",
-        "banane",
+        "banana",
         "orange",
-        "mandarine",
+        "mandarin",
         "durian",
-        "pêche",
-        "raisin",
-        "cerise",
+        "peache",
+        "grap",
+        "cherry",
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', function () {
 
+        fruits.forEach((fruit, i) => console.log(fruit))
+    })
 })();

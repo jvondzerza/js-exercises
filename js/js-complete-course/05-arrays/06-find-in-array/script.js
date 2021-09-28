@@ -11,7 +11,7 @@
 
 (function() {
 
-    var people = [
+    let people = [
         {
             firstname: "Bradford",
             lastname: "Coldbath",
@@ -90,5 +90,12 @@
     ];
 
     // your code here
+    document.getElementById('run').addEventListener('click', function () {
 
+        let jdprop = (people.find(p => p.firstname === "Jean" && p.lastname === "Dupont"));
+        let jdindex = (people.findIndex(p => p.firstname === "Jean" && p.lastname === "Dupont"));
+        console.log(jdprop.email)
+        console.log(jdindex)
+
+    })
 })();

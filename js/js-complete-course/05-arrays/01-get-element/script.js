@@ -11,20 +11,26 @@
 
 (function() {
 
-    var fruits = [
+    let fruits = [
         "apple",
         "pear",
         "raspberry",
-        "tomatos",
+        "tomatoes",
         "kiwi",
         "banana",
         "orange",
         "mandarin",
         "durian",
-        "peache",
-        "grap",
+        "peach",
+        "grape",
         "cherry",
     ];
+
+
+    document.getElementById('run').addEventListener('click', function () {
+        let tmt = fruits[3];
+        console.log(tmt);
+    });
 
     // your code here
 
