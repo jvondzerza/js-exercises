@@ -14,5 +14,9 @@
     // to change the content of a tag: document.getElementById("element-id").innerHTML = "new-value"
 
     // your code here
-
+    let today = new Date();
+    const days = ["Sunday", "Monday", "Tuesday", "Wednesday", "Thursday", "Friday", "Saturday"];
+    const months = ["January", "Febuary", "March", "April", "May", "June", "July", "August", "September", "October", "November", "December"];
+    let date = (days[today.getDay()]) + ' ' + today.getDate() + ' ' + (months[today.getMonth()]) + ' ' + today.getFullYear() + ', ' + today.getHours() + 'h' + today.getMinutes();
+    document.getElementById("target").innerHTML = date;
 })();
