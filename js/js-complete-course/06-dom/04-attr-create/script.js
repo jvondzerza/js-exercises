@@ -12,5 +12,13 @@
 (function() {
 
     // your code here
+    let catpic = document.getElementsByTagName("span")[0].getAttribute("data-image");
+    let figure = document.getElementById("target");
+    let img = document.createElement("img");
+    img.src = catpic;
+    figure.appendChild(img);
+    let oldspan = document.getElementById("source");
+    oldspan.remove();
+
 
 })();

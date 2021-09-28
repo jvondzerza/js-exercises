@@ -12,5 +12,8 @@
 (function() {
 
     // your code here
-
+    let target = document.querySelectorAll("p.target");
+    for (let i = 0; i < target.length; i++) {
+        target[i].innerHTML="owned"
+    }
 })();
