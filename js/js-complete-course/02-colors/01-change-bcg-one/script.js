@@ -11,6 +11,28 @@
 
 (function() {
 
-    // your code here
+ const colors = [
+  {
+   color: 'red',
+   htmlId: document.getElementById('red')
+  },
+  {
+   color: 'green',
+   htmlId: document.getElementById('green')
+  },
+  {
+   color: 'yellow',
+   htmlId: document.getElementById('yellow')
+  },
+  {
+   color: 'blue',
+   htmlId: document.getElementById('blue')
+  }
+ ]
 
+ colors.forEach(prop => {
+  prop.htmlId.addEventListener('click', function () {
+   document.body.style.backgroundColor = `${prop.color}`;
+  })
+ })
 })();

@@ -11,6 +11,11 @@
 
 (function() {
 
-    // your code here
+    const button = document.getElementById('run');
+    const random = Math.floor(Math.random()*16777215).toString(16);
+
+    button.addEventListener('click', function() {
+        document.body.style.backgroundColor = ("#" + random);
+    })
 
 })();
