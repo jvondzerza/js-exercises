@@ -12,13 +12,13 @@
 (function() {
 
     // your code here
-    let catpic = document.getElementsByTagName("span")[0].getAttribute("data-image");
+    let catPic = document.getElementsByTagName("span")[0].getAttribute("data-image");
     let figure = document.getElementById("target");
     let img = document.createElement("img");
-    img.src = catpic;
+    img.src = catPic;
     figure.appendChild(img);
-    let oldspan = document.getElementById("source");
-    oldspan.remove();
+    let oldSpan = document.getElementById("source");
+    oldSpan.remove();
 
 
 })();

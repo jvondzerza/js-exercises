@@ -12,5 +12,11 @@
 (function() {
 
     // your code here
+    document.getElementById("pass-one").maxLength = 10;
+    document.getElementById('pass-one').addEventListener('keyup', function () {
+
+        let password = document.getElementById("pass-one").value;
+        document.getElementById("counter").textContent = password.length + "/10";
+    })
 
 })();
