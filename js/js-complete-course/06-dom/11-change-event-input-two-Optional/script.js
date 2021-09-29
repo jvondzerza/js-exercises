@@ -12,5 +12,16 @@
 (function() {
 
     // your code here
+    document.getElementById("pass-one").addEventListener("keyup", function(){
+        let input = document.getElementById('pass-one').value;
+        let numberCheck = /[0-9]/g;
+        let found = input.match(numberCheck);
+
+        if(input.length >= 8 && found.length > 1){
+            document.getElementById('validity').innerText = 'Ok';
+        } else {
+            document.getElementById('validity').innerText = 'Not ok';
+        }
+    })
 
 })();

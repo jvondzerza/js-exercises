@@ -11,7 +11,7 @@
 
 (function() {
 
-    var gallery= [
+    let gallery = [
         "../../_shared/img/bell.svg",
         "../../_shared/img/clock.svg",
         "../../_shared/img/compass.svg",
@@ -19,6 +19,18 @@
         "../../_shared/img/map.svg",
     ];
 
-    // your code here
+    // all code a la Tim;
+
+    let counter = 1;
+
+    document.getElementById('next').addEventListener('click', function() {
+
+        let image = document.getElementsByTagName('img')[0];
+        image.src = gallery[counter];
+        counter++;
+        if(counter === gallery.length){
+            counter = 0;
+        }
+    })
 
 })();
