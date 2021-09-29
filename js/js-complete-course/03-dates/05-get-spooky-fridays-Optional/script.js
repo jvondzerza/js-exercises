@@ -12,5 +12,17 @@
 (function() {
 
     // your code here
+    document.getElementById("run").addEventListener("click", function() {
+        let input = document.getElementById('year').value;
+        let year = Number(input);
+        for (let month = 0; month < 11; month++) {
+            let thirteenth = new Date(year, month, 13);
+            if (thirteenth.getDay() == 5) {
 
+                let months = ['January','February','March','April','May','Jun','July','August','September','October','November','December'];
+                console.log(months[month])
+
+            }
+        }
+    })
 })();

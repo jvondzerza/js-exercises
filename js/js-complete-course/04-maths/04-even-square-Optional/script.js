@@ -13,8 +13,18 @@
 
     document.getElementById("run").addEventListener("click", function() {
 
-        // your code here
+            let square = function (n) {
+                return n > 0 && Math.sqrt(n) % 1 === 0;
+            };
 
-    });
+            for (num = 1; num <= 21; num++){
+
+                if (square(num)===true){
+                    console.log(num)
+                };
+            }
+
+        });
+
 
 })();
