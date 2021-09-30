@@ -21,7 +21,7 @@
 
                 if (square(num)===true){
                     console.log(num)
-                };
+                }
             }
 
         });

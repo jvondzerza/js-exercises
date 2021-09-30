@@ -11,7 +11,10 @@
 
 (() => {
     // your code here
-    fetch('http://example.com/movies.json')
-        .then(response => response.json())
-        .then(data => console.log(data));
+    document.getElementById('run').addEventListener('click', function () {
+        fetch('../../_shared/api.json')
+            .then(response => response.json())
+            .then(data => console.log(data));
+    })
+
 })();
