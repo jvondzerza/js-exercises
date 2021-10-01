@@ -11,6 +11,22 @@
 
 (function() {
 
-    // your code here
+    let text = document.getElementById('target').innerHTML;
+    let count = 0;
+    document.getElementById('target').innerHTML = "";
+    let delay = Math.floor(Math.random() * 51) + 50;
+
+    (function effect () {
+        if (count < text.length) {
+
+            document.getElementById('target').innerHTML += text.charAt(count);
+            count++;
+            setTimeout(effect, delay);
+
+        }
+    })();
+
+
+
 
 })();
