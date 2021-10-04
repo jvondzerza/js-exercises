@@ -12,5 +12,17 @@
 (function() {
 
     // your code here
+    let target = document.getElementById('target');
+    let counter = 0;
+
+    document.getElementById('increment').addEventListener("click", function () {
+        counter++;
+        localStorage.setItem("increment", counter.toString());
+        target.innerText = counter.toString();
+    })
+
+    window.addEventListener('load', function () {
+        target.innerText = localStorage.getItem("increment");
+    })
 
 })();

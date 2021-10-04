@@ -13,15 +13,26 @@
 
     // your code here
     let x = Math.floor(Math.random() * 100) + 1;
+    console.log(x);
     let guess = window.prompt("Guess the number between 1 and 100.");
-    for (let i = 1; i < guess.length; i++) {
+    let guesses = 0;
+    do {
         if (guess < x) {
-            guess = window.prompt("Higher!")
+            guess = window.prompt("Higher!");
         } else if (guess > x) {
-            guess = window.prompt("Lower")
-        } else if (guess = x) {
-            window.prompt("Spot on, good guess!")
+            guess = window.prompt("Lower!");
+        }
+        guesses++;
+    } while (guess != x);
+
+    if (guess == x) {
+        if (guesses === 1) {
+            alert("First try! It only took " + (guesses) + " guess!")
+        } else {
+            guesses++;
+            alert("You took " + guesses + " guesses.");
         }
     }
-    if (i = 1)
+
+
 })();
