@@ -11,4 +11,15 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener('click', async() => {
+
+        let people = await window.lib.getPersons()
+        people.forEach((person) => {
+            if (person) {
+                console.table(person)
+            }   else {
+                console.error()
+            }
+        })
+    })
 })();

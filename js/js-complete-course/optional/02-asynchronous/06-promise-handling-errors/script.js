@@ -11,4 +11,18 @@
 
 (() => {
     // your code here
+    document.getElementById("run").addEventListener("click", () => {
+        window.lib.getPersons()
+            .then((people, error) => {
+                people.forEach((person) => {
+                    if (person) {
+                        console.table(person)
+                    }   else {
+                        console.error(error)
+                    }
+
+                })
+            })
+
+    })
 })();

@@ -11,4 +11,13 @@
 
 (() => {
     // your code here
+    window.lib.getPosts((error, array) => {
+        document.getElementById("run").addEventListener("click", function (){
+            if (error) {
+                console.log("Sike! I don't return errors!");//Mclilz
+            }   else {
+                console.table(array);
+            }
+        })
+    })
 })();
