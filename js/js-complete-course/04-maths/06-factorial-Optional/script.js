@@ -16,6 +16,22 @@
     document.getElementById("run").addEventListener("click", function() {
 
         // your code here
+        let value = document.getElementById('number').value
+        console.log(`your input is ${value}`)
+
+            function factorialize(num) {
+            let result = num;
+            if (num === 0 || num === 1)
+                return 1;
+            while (num > 1) {
+                num--;
+                result *= num;
+            }
+            return result;
+        }
+
+        console.log(`${value}! is ${factorialize(value)}`);
+
 
     });
 

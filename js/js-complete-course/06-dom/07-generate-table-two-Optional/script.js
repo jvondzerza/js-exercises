@@ -9,7 +9,6 @@
             let cell = row.insertCell(c);
             cell.innerHTML = Number(r+1) * Number(c+1);
         }
-
     }
 
     let target = document.getElementById("target");
